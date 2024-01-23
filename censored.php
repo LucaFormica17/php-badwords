@@ -1,5 +1,9 @@
 <?php
+    $paragraph = $_GET['paragraph'];
+    $censored = $_GET['censored'];
     $title = 'PHP Badwords';
+
+    $para_len = strlen($paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -25,23 +29,19 @@
         </header>
         <main>
             <div class="container">
-                <form action="censored.php" method="get">
-                    <div class="row my-5">
-                        <div class="col-6">
-                            <label for="control-label">Testo</label>
-                            <input type="text" id="my-paragraph" class="form-control" name="paragraph" placeholder="Inserisci il testo...">
+                <div class="row my-5">
+                    <div class="col-12">
+                        <h2>Testo originale</h2>
+                        <div class="text-container">
+                            <p>
+                                <?php echo $paragraph ?>
+                            </p>
                         </div>
-                        <div class="col-6">
-                            <label for="control-label">Censura</label>
-                            <input type="text" id="my-censored" class="form-control" name="censored" placeholder="Inserisci la parola da censurare...">
-                        </div>
+                        <h3>
+                            <?php echo "Numero di caratteri: " .$para_len ?>
+                        </h3>
                     </div>
-                    <div class="row my-1">
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-success">Invia</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </main>
     </body>
