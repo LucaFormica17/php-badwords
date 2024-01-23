@@ -1,3 +1,7 @@
+<?php
+    $title = 'PHP Badwords';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +12,37 @@
         <title>PHP Badwords</title>
     </head>
     <body>
-        
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>
+                            <?php echo $title ?>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <form action="censored.php" method="get">
+                    <div class="row my-5">
+                        <div class="col-6">
+                            <label for="control-label">Testo</label>
+                            <input type="text" id="my-paragraph" class="form-control" name="paragraph" placeholder="Inserisci il testo...">
+                        </div>
+                        <div class="col-6">
+                            <label for="control-label">Censura</label>
+                            <input type="text" id="my-censored" class="form-control" name="censored" placeholder="Inserisci la parola da censurare...">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-12">
+                            <button class="btn btn-success">Invia</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
