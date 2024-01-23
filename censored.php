@@ -4,6 +4,8 @@
     $title = 'PHP Badwords';
 
     $para_len = strlen($paragraph);
+    $new_paragraph = str_replace($censored, '***', $paragraph);
+    $new_para_len = strlen($new_paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +41,19 @@
                         </div>
                         <h3>
                             <?php echo "Numero di caratteri: " .$para_len ?>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col-12">
+                        <h2>Testo censurato</h2>
+                        <div class="text-container">
+                            <p>
+                                <?php echo $new_paragraph ?>
+                            </p>
+                        </div>
+                        <h3>
+                            <?php echo "Numero di caratteri: " .$new_para_len ?>
                         </h3>
                     </div>
                 </div>

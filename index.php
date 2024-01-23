@@ -26,17 +26,17 @@
         <main>
             <div class="container">
                 <form action="censored.php" method="get">
-                    <div class="row my-5">
+                    <div class="row mt-5">
                         <div class="col-6">
                             <label for="control-label">Testo</label>
-                            <input type="text" id="my-paragraph" class="form-control" name="paragraph" placeholder="Inserisci il testo...">
+                            <input type="text" id="my-paragraph" class="form-control my-3" name="paragraph" placeholder="Inserisci il testo..." required="">
                         </div>
                         <div class="col-6">
                             <label for="control-label">Censura</label>
-                            <input type="text" id="my-censored" class="form-control" name="censored" placeholder="Inserisci la parola da censurare...">
+                            <input type="text" id="my-censored" class="form-control my-3" name="censored" placeholder="Inserisci la parola da censurare..." required="">
                         </div>
                     </div>
-                    <div class="row my-1">
+                    <div class="row">
                         <div class="col-12">
                             <button type="submit" class="btn btn-success">Invia</button>
                         </div>
